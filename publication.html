@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Publication Task</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel='stylesheet' media='screen and (max-width: 780px)' href='mobile.css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+
+</head>
+<body>
+	<header>
+		<img src="logo.png" alt="logo" class="logo">
+		<nav>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#"><i class="far fa-user-circle"></i></a></li>
+			</ul>
+		</nav>
+
+		<div class="menu" onclick="myFunction(this)">
+		  <div class="bar1"></div>
+		  <div class="bar2"></div>
+		  <div class="bar3"></div>
+		</div>
+		<div class="barMenu closeBarMenu">
+			<ul>
+				<li><a href="#" class="active barListMenu">Home</a></li>
+				<li><a href="#" class="barListMenu">About</a></li>
+				<li><a href="#" class="barListMenu">Contact</a></li>
+				<li><a href="#" class="barListMenu"><i class="far fa-user-circle"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+
+	<div class="searchForm">
+
+		<div class="mobileFormButtonOpen hide">
+			<i class="far fa-caret-square-down" style="color: #fff;"></i>
+		</div>
+
+		<div class="mobileFormButtonClose hide">
+			<i class="far fa-caret-square-up" style="color: #fff;"></i>
+		</div>
+
+		<form>
+			<label class="dataSearch">DATA SEARCH</label>
+			<span class="fas fa-search"></span>
+			<input class="inputSearch" type="text" placeholder="Search To">
+			<span class="fas fa-calendar-alt"></span>
+			<input class="inputYear" type="text" placeholder="year">
+			<span class="fas fa-user"></span>
+			<input class="inputAuthor" type="text" placeholder="author">
+			<div class="btn"><p class="inBtuttonText">SEARCH</p></div>
+		</form>
+	</div>
+	<div style="clear: both;"></div>
+
+
+	<div class="featuresList mobileFeatureList">
+		<div class="mobileFeatureListButtonOpen hide">
+			<i class="far fa-caret-square-down"></i>
+		</div>
+
+		<div class="mobileFeatureListButtonClose hide">
+			<i class="far fa-caret-square-up"></i>
+		</div>
+		<ul>
+			<li> <a href="#"> <i class="fab fa-hubspot iconsStyleFeature"></i> </a> <span class="iconTextActive">Features</span> </li>
+			<li> <a href="#"> <i class="far fa-map iconsStyleMap"></i> </a> <span class="iconText">Map</span> </li>
+			<li> <a href="#"> <i class="fab fa-codepen iconsStyleRest"></i></i> </a> <span class="iconText">What If</span> </li>
+			<li> <a href="#"> <i class="fas fa-chart-line iconsStyleRest"></i> </a> <span class="iconText">Statistics</span> </li>
+			<li> <a href="#"> <i class="fas fa-bullseye iconsStyleRest"></i> </a> <span class="iconText">Fair Compliance</span> </li>
+		</ul>
+	</div>
+	<div style="clear: both;"></div>
+
+
+	<div class="container">
+		<div class="sideBox1 sideBox">
+			<span class="sideBox1Authors">AUTHORS</span>
+			<div class="authorIcos">
+				<i class="fas fa-user-alt userAuthorIcon"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon2"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon3"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon4"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon5"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon6"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon7"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon8"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon9"></i>
+				<i class="fas fa-user-alt userAuthorIcon userAuthorIcon10"></i>
+			</div>
+
+			<div class="sideBox1Text">
+				<p>A. E. Bentley, A.S. Turner, <br>N. Gosman, F. J. Leigh, M. <br>Maccaferri, S. Dreisigacker,<br> A. Greenland, D. A. Laurie</p>
+			</div>
+
+		</div>
+		<div style="clear: both;"></div>
+
+		<div class="sideBox2 sideBox">
+			<span class="sideBox1Authors">DETAILS</span>
+			<div class="detailsIcon">
+				<img src="calendar.png" class="calendarIcon">
+			</div>
+			<div class="sideBox2Text">
+				<span class="detailsText">Plant Breeding, <strong>2010</strong></span>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="sideBox3 sideBox">
+			<span class="sideBox1Authors">AGROVOC TERMS</span>
+			<div class="sideBox3Text">
+				<span>
+					<strong><span class="sideBox3BigText">alleles</span></strong> adaptation <br>
+					<strong><span class="sideBox3BigText">photoperiod</span></strong> germplasm <br>
+					<strong><span class="sideBox3SmallText">breeding</span></strong> flowering culvivation <br>
+					hybridizin ghexaploids
+				</span>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="sideBox4 sideBox">
+			<span class="sideBox1Authors">PERMALINKS</span>
+			<div class="permalinksIcon">
+				<img src="linkIcon.png">
+			</div>
+			<div class="sideBox4Text">
+				<a href="#">DOI</a> <br> <br>
+				<a href="#">CIMMYT Link</a>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+
+		<div class="mainBox1">
+			<span class="sideBox1Authors">TITLE</span>
+			<div class="mainBox1Icons">
+				<i class="fas fa-print"></i> print / <i class="far fa-heart"></i> favs / <i class="far fa-envelope"></i> mail to 
+			</div>
+
+			<span class="mainBox1Text">"Frequency of photoperiod-insensitive Ppd-A1a alleles in tetraploid, hexaploid and synthetic hexaploid wheat germaplasm"</span>
+
+			<div class="share">
+				<p> SHARE ON: 
+					<a href=""><i class="fab fa-twitter shareIcon"></i></a>
+					<a href=""><i class="fab fa-facebook-f shareIcon"></i></a>
+					<a href=""><i class="fab fa-linkedin-in shareIcon"></i></a>
+					<a href=""><i class="fab fa-reddit-alien shareIcon"></i></a>
+					<a href=""><i class="fab fa-google-plus-g shareIcon"></i></a>
+				</p>
+			</div>
+		</div>
+		<div class="mainLeftBox">
+			<span class="sideBox1Authors">REFERS TO</span>
+			<div class="map"></div>
+			<div class="btnLarge">
+				<span class="btnLargeText">VIEW LARGE</span>
+			</div>
+		</div>
+		<div class="mainRightBox">
+			<span class="sideBox1Authors">FAIR COMPLIANCE</span>
+			<div class="graph"></div>
+			<div class="btnLarge2">
+				<span class="btnLargeText2">VIEW METRICS</span>
+			</div>
+		</div>
+
+		<div class="mainBox2">
+			<span class="sideBox1Authors">SUMMARY</span>
+			<span class="summaryText">Differences in photoperiod sensitivity are widely used in wheat breeding to provide adaptation to diverse agronomic enviroments. Two photoperiod insensitive (PI) mutations in the A genome (Ppd-A1a alleles) were previously identified using near-isgenic lines of tetrapoid durum wheat. We show that these Ppd-A1a alleles predominate in modern durum wheat, suggesting they were selected for improved adaptation during durum culvivation. To increase genetic diversity in hexaploid wheat, synthetic hexaploid wheat lines were developer at CIMMYT by hybridizing elite durum lines with Aegilops tauschii accessions. Ppd-A1a alleles from durum wheat were found in 71.4% of 447 synthetic hexaploids and 9.6% of 115 advanced selections. Backcroosses to hxaploid wheat showed that the durum Ppd-A1a alleles conferred a PI phenotype and that one allele was intermediate between known B and D genome mutations, providing a new source of flowering time variation in hexaploid wheat and the potential for novel combinations of PI alleles.
+			</span>
+		</div>
+		<div class="mainBox3">
+			<span class="sideBox1Authors">RELEVANT DATASETS</span>
+			<div class="mainBox3List">
+				<ul>
+					<li>
+						<a href="#">Seeds of Discvery - MasAgro Biodiverasidad Wheat DArTseq-Derived SNP Data: Beta Recall Results From 2011-2014</a> <br>
+
+						<span class="italicLetters subLetter">International Maize and Wheat Improvement Center (CIMMYT), 2016</span>
+					</li>
+
+					<li>
+						<a href="#">Wheat Linked Topcross Population Information from the Seeds of Discvery - MasAgro Biodiverasidad Project</a> <br> 
+
+						<span class="subLetter"> International Maize and Wheat Improvement Center (CIMMYT), 2017</span>
+					</li>
+
+					<li>
+						<a href="#">Evaluation of Trial for Genetic Analysis</a> <br>
+
+						<span class="subLetter"> International Crops Research Institute for the Semi-Arid Trpics (ICRISAT), 1978</span>
+					</li>
+					<li>
+						<a href="#">Evaluation of Trial for Genetic Analysis</a> <br>
+
+						<span class="subLetter">International Crops Research Institute for the Semi-Arid Trpics (ICRISAT), 1978</span>
+					</li>
+					<li>
+						<a href="#">Genealogical information for maize pre-breeding materials in the Seeds of Discovery-MasAgro Biodiversidad project: 2013-2015</a> <br>
+
+						<span class="subLetter">International Maize and Wheat Improvement Center (CIMMYT), 20145</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footerLine"></div>
+		<div class="footerText">
+		<a href="#">Privacy</a>	 | <a href="#">Policies</a>  | <a href="#">Terms</a> 
+		</div>
+		<div class="line"></div>
+		<div class="copyrights">
+			<span class="copyrightsText1">Copyright by CeRES 2018</span>
+			<span class="copyrightsText2">Powered by agroknow | Design by RSG</span>
+		</div>
+	</footer>
+</body>
+
+<script>
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+</script>
+<script src="menu.js"></script>
+<script src="hideAndSeak.js"></script>
+<script src="widthOne.js"></script>
+<script src="widthTwo.js"></script>
+<script src="widthThree.js"></script>
+<script src="widthFour.js"></script>
+<script src="onresize.js"></script>
+
+</html>
