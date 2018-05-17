@@ -3,13 +3,18 @@
 <head>
 	<title>Publication Task</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel='stylesheet' media='screen and (max-width: 780px)' href='mobile.css' />
+	<link rel='stylesheet' media='screen and (max-width: 500px)' href='mobile.css' />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+ 	<script src="http://code.highcharts.com/maps/modules/map.js"></script>
+ 	<script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
+ 	<script src="https://code.highcharts.com/mapdata/custom/world-continents.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 
 </head>
 <body>
@@ -77,13 +82,12 @@
 			<li> <a href="#"> <i class="far fa-map iconsStyleMap"></i> </a> <span class="iconText">Map</span> </li>
 			<li> <a href="#"> <i class="fab fa-codepen iconsStyleRest"></i></i> </a> <span class="iconText">What If</span> </li>
 			<li> <a href="#"> <i class="fas fa-chart-line iconsStyleRest"></i> </a> <span class="iconText">Statistics</span> </li>
-			<li> <a href="#"> <i class="fas fa-bullseye iconsStyleRest"></i> </a> <span class="iconText">Fair Compliance</span> </li>
+			<li> <a href="#"> <i class="fas fa-bullseye iconsStyleRest"></i> </a> <span class="iconText lastChild">Fair Compliance</span> </li>
 		</ul>
 	</div>
 	<div style="clear: both;"></div>
 
 
-	<div class="container">
 		<div class="sideBox1 sideBox">
 			<span class="sideBox1Authors">AUTHORS</span>
 			<div class="authorIcos">
@@ -131,7 +135,7 @@
 		<div class="sideBox4 sideBox">
 			<span class="sideBox1Authors">PERMALINKS</span>
 			<div class="permalinksIcon">
-				<img src="linkIcon.png">
+				<img src="linkIcon.png" class="linkIcon">
 			</div>
 			<div class="sideBox4Text">
 				<a href="#">DOI</a> <br> <br>
@@ -159,15 +163,21 @@
 			</div>
 		</div>
 		<div class="mainLeftBox">
+
 			<span class="sideBox1Authors">REFERS TO</span>
-			<div class="map"></div>
+			<div class="map">
+			<div id="myMap" style="width:100%;top: 30px; position: relative;" ></div>
+			</div>
 			<div class="btnLarge">
 				<span class="btnLargeText">VIEW LARGE</span>
 			</div>
+
 		</div>
 		<div class="mainRightBox">
 			<span class="sideBox1Authors">FAIR COMPLIANCE</span>
-			<div class="graph"></div>
+			<div class="graph">
+				<div id="container" style="width:80%; height:220px; position: relative;top: 30px; "></div>
+			</div>
 			<div class="btnLarge2">
 				<span class="btnLargeText2">VIEW METRICS</span>
 			</div>
@@ -175,7 +185,7 @@
 
 		<div class="mainBox2">
 			<span class="sideBox1Authors">SUMMARY</span>
-			<span class="summaryText">Differences in photoperiod sensitivity are widely used in wheat breeding to provide adaptation to diverse agronomic enviroments. Two photoperiod insensitive (PI) mutations in the A genome (Ppd-A1a alleles) were previously identified using near-isgenic lines of tetrapoid durum wheat. We show that these Ppd-A1a alleles predominate in modern durum wheat, suggesting they were selected for improved adaptation during durum culvivation. To increase genetic diversity in hexaploid wheat, synthetic hexaploid wheat lines were developer at CIMMYT by hybridizing elite durum lines with Aegilops tauschii accessions. Ppd-A1a alleles from durum wheat were found in 71.4% of 447 synthetic hexaploids and 9.6% of 115 advanced selections. Backcroosses to hxaploid wheat showed that the durum Ppd-A1a alleles conferred a PI phenotype and that one allele was intermediate between known B and D genome mutations, providing a new source of flowering time variation in hexaploid wheat and the potential for novel combinations of PI alleles.
+			<span class="summaryText">Differences in photoperiod sensitivity are widely used in wheat breeding to provide adaptation to diverse agronomic enviroments. Two photoperiod insensitive (PI) mutations in the A genome (Ppd-A1a alleles) were previously identified using near-isogenic lines of tetraploid durum wheat. We show that these Ppd-A1a alleles predominate in modern durum wheat but are absent from wild tetraploid wheat and from conventional hexaploid wheat, suggesting they were selected for improved adaptation during durum culvivation. To increase genetic diversity in hexaploid wheat, synthetic hexaploid wheat lines were developer at CIMMYT by hybridizing elite durum lines with Aegilops tauschii accessions. Ppd-A1a alleles from durum wheat were found in 71.4% of 447 synthetic hexaploids and 9.6% of 115 advanced selections. Backcrosses to hexaploid wheat showed that the durum Ppd-A1a alleles conferred a PI phenotype and that one allele was intermediate between known B and D genome mutations, providing a new source of flowering time variation in hexaploid wheat and the potential for novel combinations of PI alleles.
 			</span>
 		</div>
 		<div class="mainBox3">
@@ -212,7 +222,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
 	<footer>
 		<div class="footerLine"></div>
 		<div class="footerText">
@@ -234,9 +243,153 @@ function myFunction(x) {
 <script src="menu.js"></script>
 <script src="hideAndSeak.js"></script>
 <script src="widthOne.js"></script>
-<script src="widthTwo.js"></script>
 <script src="widthThree.js"></script>
-<script src="widthFour.js"></script>
 <script src="onresize.js"></script>
 
+<script type="text/javascript">
+
+
+$(function () { 
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'solidgauge'
+        },
+        title: {
+            text: false
+        },
+        pane: {
+        startAngle: -270,
+        endAngle: -630,
+        background: [{ // Track for R
+            outerRadius: '100%',
+            innerRadius: '90%',
+            backgroundColor: '#efefef',
+            borderWidth: 0
+        }, { // Track for I
+            outerRadius: '80%',
+            innerRadius: '70%',
+            backgroundColor: '#efefef',
+            borderWidth: 0
+        }, { // Track for A
+            outerRadius: '60%',
+            innerRadius: '50%',
+            backgroundColor: '#efefef',
+            borderWidth: 0
+        }, { // Track for F
+            outerRadius: '40%',
+            innerRadius: '30%',
+            backgroundColor: '#efefef',
+            borderWidth: 0
+        }]
+    }, 
+
+    yAxis: {
+        min: 0,
+        max: 5,
+        lineWidth: 0,
+        tickPositions: []
+    },
+
+    plotOptions: {
+        solidgauge: {
+            dataLabels: {
+                enabled: false
+            },
+            linecap: 'round',
+            stickyTracking: false,
+            rounded: true
+        }
+    },
+
+    series: [{
+        name: 'R',
+        data: [{
+            color: '#5dd097',
+            radius: '100%',
+            innerRadius: '90%',
+            y: 4.67
+        }]
+    }, {
+        name: 'I',
+        data: [{
+            color: '#6cd2e8',
+            radius: '80%',
+            innerRadius: '70%',
+            y: 4
+        }]
+    }, {
+        name: 'A',
+        data: [{
+            color: '#7aa5f3',
+            radius: '60%',
+            innerRadius: '50%',
+            y: 5
+        }]
+    }, {
+        name: 'F',
+        data: [{
+            color: '#8a75dc',
+            radius: '40%',
+            innerRadius: '30%',
+            y: 5
+        }]
+    }]
+    });
+});
+</script>
+
+<script>
+
+	$.getJSON('https://cdn.rawgit.com/highcharts/highcharts/v6.0.4/samples/data/world-population-density.json', function (data) {
+
+	    // Initiate the chart
+	    var chart = new Highcharts.mapChart('myMap', {
+
+	        chart: {
+	            width: null,
+	            height: 200
+	        },
+
+	        title: {
+	            text: false
+	        },
+
+	        mapNavigation: {
+	            enabled: true,
+	            buttonOptions: {
+	                verticalAlign: 'left',
+	                color: '#f8931d'
+	            }
+	        },
+
+	        colorAxis: {
+	            min: 1,
+	            max: 1000,
+	            minColor: '#c7ccd0',
+	            maxColor: '#4c5a63',
+	            type: 'logarithmic'
+	        },
+
+	        legend: {
+	            enabled: false
+	        },
+
+	        series: [{
+	            data: data,
+	            mapData: Highcharts.maps['custom/world'],
+	            joinBy: ['iso-a2', 'code'],
+	            name: 'Population density',
+	            borderWidth: 0.3,
+	            states: {
+	                hover: {
+	                    color: '#f8931d'
+	                }
+	            },
+	            tooltip: {
+	                valueSuffix: '/km²'
+	            }
+	        }],
+	    });
+	});
+</script>
 </html>
