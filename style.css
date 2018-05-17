@@ -114,6 +114,7 @@ input, select {
 body{
     background-color: #e6e7e9;
     font-family: 'Roboto', sans-serif;
+    height: 0;
 }
 
 header{
@@ -263,6 +264,30 @@ header{
     left: 85.5%;
     top: 163px;
     cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.btn:after {
+    content: "";
+    background: #989898;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 .inBtuttonText{
@@ -361,12 +386,15 @@ header{
 .sideBox1{
     float: left;
     height: 257px;
+    position: relative;
     background-color: #fff;
     border-radius: 10px;
+    top: 40px;
 }
 
 .sideBox{
     width: 16%;
+    left: 5%;
 }
 
 .sideBox1Authors{
@@ -441,7 +469,8 @@ header{
     height: 186px;
     background-color: #fff;
     border-radius: 10px;
-    margin-top: 20px; 
+    position: relative;
+    top: 70px;
 }
 
 .calendarIcon{
@@ -463,7 +492,8 @@ header{
     height: 186px;
     background-color: #fff;
     border-radius: 10px;
-    margin-top: 20px; 
+    position: relative;
+    top: 100px; 
 }
 
 .sideBox3Text{
@@ -494,7 +524,8 @@ header{
     height: 186px;
     background-color: #fff;
     border-radius: 10px;
-    margin-top: 20px; 
+    position: relative;
+    top: 130px;
 }
 
 .permalinksIcon{
@@ -514,13 +545,13 @@ header{
 }
 
 .mainBox1{
-    position: absolute;
-    top: 308px;
-    width: 72%;
+    position: relative;
+    top: -775px;
+    width: 71%;
     height: 310px;
     border-radius: 10px;
     background-color: #fff;
-    left: 22%;
+    left: 23%;
     font-weight: 300;
 }
 
@@ -560,13 +591,13 @@ header{
 }
 
 .mainLeftBox{
-    width: 30%;
-    height: 326px;
+    width: 34%;
+    height: 330px;
     background-color: #fff;
-    position: absolute;
+    position: relative;
     border-radius: 10px;
-    left: 22%;
-    top: 651px;
+    left: 23%;
+    top: -740px;
 }
 .btnLarge{
     position: absolute;
@@ -580,7 +611,31 @@ header{
     color: #fff;
     font-weight: 600;
     font-size: 20px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
     cursor: pointer;
+}
+
+.btnLarge:after {
+    content: "";
+    background: #f7d4a9;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btnLarge:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 .btnLargeText{
@@ -590,14 +645,22 @@ header{
 }
 
 .mainRightBox{
-    width: 40%;
-    height: 326px;
+    width: 36%;
+    height: 328px;
     background-color: #fff;
-    position: absolute;
+    position: relative;
+    float: right;
     border-radius: 10px;
-    left: 54%;
-    top: 651px;
+    left: -6%;
+    top: -1070px;
 }
+
+.mainRightBox:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 
 .btnLarge2{
     position: absolute;
@@ -611,7 +674,37 @@ header{
     color: #fff;
     font-weight: 600;
     font-size: 20px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
     cursor: pointer;
+}
+
+.btnLarge2:after {
+    content: "";
+    background: #f7d4a9;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btnLarge2:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.btnLargeText{
+    position: absolute;
+    top: 8px;
+    left: 20px;
 }
 
 .btnLargeText2{
@@ -620,11 +713,11 @@ header{
     left: 12px;
 }
 .mainBox2{
-    position: absolute;
-    top: 1010px;
-    left: 22%;
-    width: 72%;
-    height: 360px;
+    position: relative;
+    top: -697px;
+    left: 23%;
+    width: 71%;
+    height: 400px;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -641,10 +734,10 @@ header{
 }
 
 .mainBox3{
-    position: absolute;
-    top: 1400px;
-    left: 22%;
-    width: 72%;
+    position: relative;
+    top: -650px;
+    left: 23%;
+    width: 71%;
     height: 550px;
     background-color: #fff;
     border-radius: 10px;
@@ -688,8 +781,8 @@ header{
     font-style: italic;
 }
 footer{
-    position: absolute;
-    top: 2000px;
+    position: relative;
+    top: -610px;
     width: 95%;
     height: 155px;
     background-color: #4b4b4b;
@@ -739,540 +832,323 @@ footer{
 }
 /*****MEDIA QUERIES**************/
 
-@media only screen and (max-width: 1800px) {
+
+@media only screen and (max-width: 1760px) {
+
+    .mainBox2 {
+    height: 440px;
+    }
+
+    .mainBox3 {
+    height: 600px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1599px) {
+    .userAuthorIcon {
+    font-size: 19px;
+    }
+
+    .userAuthorIcon7 {
+        left: -103px;
+        top: 80px;
+    }
+    .userAuthorIcon8 {
+        left: -98px;
+        top: 80px;
+    }
+    .userAuthorIcon9 {
+        left: -93px;
+        top: 80px;
+    }
+    .userAuthorIcon10 {
+        left: -88px;
+        top: 80px;
+    }
+
+    .sideBox1Text {
+        top: 105px;
+        width: 90%;
+    }
+
+    .share {
+    left: 65%;
+    }
+
+    .shareIcon {
+    font-size: 25px;
+    text-indent: 10px;
+    }
+
+    .summaryText {
+    font-size: 20px;
+    }
+
+    .mainBox3List ul li a {
+    font-size: 19px;
+    }
+
+    .sideBox1Authors {
+    font-size: 27px;
+    }
+
+    .sideBox3Text {
+    font-size: 14px;
+    }
+    .sideBox3BigText {
+    font-size: 22px;
+    }
+}
+@media only screen and (max-width: 1411px) {
     .sideBox {
     width: 17%;
     }
 
-    .mainBox1 {
-    width: 71%;
-    left: 23%;
+    .mainBox1, .mainBox2, .mainBox3 {
+        width: 70%;
+        left: 24%;
     }
 
-    .mainLeftBox {
-    width: 29%;
-    left: 23%;
+    .mainLeftBox{
+        left: 24%;
     }
-
-    .mainBox2 {
-    left: 23%;
-    width: 71%;
-    height: 380px;
-    }
-
-    .mainBox3 {
-    top: 1420px;
-    left: 23%;
-    width: 71%;
-    height: 585px;
-    }
-
-    footer {
-    top: 2040px;
-    }
-}
-
-@media only screen and (max-width: 1695px) {
-    .sideBox {
-    width: 18%;
-    }
-
-    .mainBox1 {
-    width: 70%;
-    left: 24%;
-    }
-
-    .mainLeftBox {
-    width: 28%;
-    left: 24%;
-    }
-
-    .mainBox2 {
-    left: 24%;
-    width: 70%;
-    height: 410px;
-    }
-
-    .mainBox3 {
-    top: 1455px;
-    left: 24%;
-    width: 70%;
-    height: 595px;
-    }
-
-    footer {
-    top: 2080px;
-    }
-}
-
-@media only screen and (max-width: 1595px) {
-    .sideBox {
-    width: 19%;
-    }
-
-    .mainBox1 {
-    width: 69%;
-    left: 25%;
-    }
-
-    .mainLeftBox {
-    width: 27%;
-    left: 25%;
-    }
-    .share {
-    left: 63%;
-    }
-    .mainBox2 {
-    left: 25%;
-    width: 69%;
-    height: 410px;
-    }
-
-    .mainBox3 {
-    top: 1455px;
-    left: 25%;
-    width: 69%;
-    height: 595px;
-    }
-
-    footer {
-    top: 2080px;
-    }
-}
-
-@media only screen and (max-width: 1515px) {
-    .sideBox {
-    width: 20%;
-    }
-
-    .mainBox1 {
-    width: 68%;
-    left: 26%;
-    }
-
-    .mainLeftBox {
-    width: 26%;
-    left: 26%;
-    }
-    .share {
-    left: 61%;
-    }
-    .mainBox2 {
-    left: 26%;
-    width: 68%;
-    height: 440px;
-    }
-
-    .mainBox3 {
-    top: 1490px;
-    left: 26%;
-    width: 68%;
-    height: 595px;
-    }
-
-    footer {
-    top: 2120px;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    .sideBox {
-    width: 21%;
-    }
-
-    .mainBox1 {
-    width: 67%;
-    left: 27%;
-    }
-
-    .mainLeftBox {
-    width: 27%;
-    left: 27%;
-    }
-
     .mainRightBox {
-    width: 38%;
-    left: 56%;
-    }
-    .share {
-    left: 59%;
-    }
-    .shareIcon {
-    font-size: 25px;
-    text-indent: 12px;
+        width: 35%;
     }
     .mainBox2 {
-    left: 27%;
-    width: 67%;
-    height: 440px;
-    }
-    .summaryText {
-    font-size: 19px;
+        height: 480px;
     }
 
     .mainBox3 {
-    top: 1490px;
-    left: 27%;
-    width: 67%;
-    height: 595px;
-    }
-
-    footer {
-    top: 2120px;
+        height: 630px;
     }
 }
 
-@media only screen and (max-width: 1310px) {
-    .sideBox {
-    width: 23%;
+@media only screen and (max-width: 1350px) {
+    .sideBox1Text {
+        font-size: 14px;
+    }
+    .detailsText{
+        font-size: 14px;
     }
 
-    .mainBox1 {
-    width: 66%;
-    left: 28%;
+    .sideBox1Authors {
+        font-size: 24px;
     }
 
-    .mainLeftBox {
-    width: 26%;
-    left: 28%;
+    .mainBox1Text {
+        font-size: 21px;
     }
+
+    .shareIcon {
+        font-size: 23px;
+        text-indent: 7px;
+    }
+
     .share {
-    left: 59%;
-    }
-    .mainBox2 {
-    left: 28%;
-    width: 66%;
+        left: 60%;
     }
 
-    .mainBox3 {
-    left: 28%;
-    width: 66%;
+    .userAuthorIcon {
+        font-size: 17px;
     }
 
-    footer {
-    top: 2120px;
+    .userAuthorIcon7 {
+        left: -91px;
+        top: 80px;
+    }
+
+    .userAuthorIcon8 {
+        left: -86px;
+        top: 80px;
+    }
+
+    .userAuthorIcon9 {
+        left: -81px;
+        top: 80px;
+    }
+
+    .userAuthorIcon10 {
+        left: -76px;
+        top: 80px;
     }
 }
 
 @media only screen and (max-width: 1250px) {
     .sideBox {
-    width: 24%;
+        width: 18%;
     }
 
-    .mainBox1 {
-    width: 65%;
-    left: 29%;
+    .mainBox1, .mainBox2, .mainBox3 {
+        width: 69%;
+        left: 25%;
     }
 
     .mainLeftBox {
-    width: 26%;
-    left: 29%;
+        left: 25%;
     }
+
     .mainRightBox {
-    width: 37%;
-    left: 57%;
-    }   
-    .share {
-    left: 56%;
-    }
-    .mainBox2 {
-    left: 29%;
-    width: 65%;
-    height: 470px;
+        width: 34%;
     }
 
-    .mainBox3 {
-    left: 29%;
-    width: 65%;
-    top: 1510px;
-        height: 600px;
+    .sideBox3BigText {
+        font-size: 20px;
     }
 
-    footer {
-    top: 2160px;
+    .sideBox3Text {
+        font-size: 13px;
+    }
+
+    .sideBox4Text a {
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
-
-    header nav ul li a {
-    padding: 11px 20px;
-    font-size: 24px;
-    top: 42px;
+    .mainBox2 {
+        height: 520px;
     }
 
-    .dataSearch {
-    font-size: 30px;
-    top: 105px;
+    .sideBox {
+        width: 19%;
     }
 
-    .inputSearch {
-    height: 41px;
-    font-size: 15px;
-    top: 58px;
+    .mainBox1, .mainBox2, .mainBox3 {
+        width: 68%;
+        left: 26%;
     }
 
-    .fa-search {
-    top: 165px;
-    left: 45%;
+    .mainLeftBox {
+        left: 26%;
     }
 
-    .fa-calendar-alt {
-    top: 166px;
+    .mainRightBox {
+        width: 33%;
     }
+}
 
-    .fa-user {
-    top: 166px;
-    }
 
-    .iconsStyleFeature {
-    font-size: 20px;
-    top: -2px;
-    }
-
-    .iconTextActive {
-    font-size: 18px;
-    top: -2px;
-    }
-
-    .iconsStyleMap {
-    font-size: 20px;
-    top: -2px;
-    }
-
-    .iconText {
-    font-size: 18px;
-    top: -2px;
-    }
-
-    .iconsStyleRest {
-    font-size: 20px;
-    top: -2px;
-    }
+@media only screen and (max-width: 1119px) {
 
     .sideBox1Authors {
-    font-size: 26px;
-    }
-
-    .userAuthorIcon {
-    font-size: 21px;
-    }
-
-    .userAuthorIcon7 {
-    left: -115px;
-    }
-
-    .userAuthorIcon8 {
-    left: -110px;
-    }
-
-    .userAuthorIcon9 {
-    left: -105px;
-    }
-
-    .userAuthorIcon10 {
-    left: -100px;
-    }
-
-    .sideBox1Text {
-    font-size: 15px;
-    }
-
-    .detailsText {
-    left: 85px;
-    font-size: 15px;
-    }
-
-    .sideBox3Text {
-    font-size: 15px;
-    }
-
-    .sideBox3BigText {
-    font-size: 23px;
+        font-size: 22px;
     }
 
     .mainBox1Text {
-    font-size: 20px;
-    }
-
-    .sideBox {
-    width: 24%;
-    }
-
-    .mainBox1 {
-    width: 65%;
-    left: 29%;
-    }
-
-    .mainLeftBox {
-    width: 26%;
-    left: 29%;
-    }
-
-    .mainRightBox {
-    width: 37%;
-    left: 57%;
-    }
-
-    .share {
-    left: 54%;
+        font-size: 19px;
     }
 
     .shareIcon {
-    font-size: 20px;
+        font-size: 20px;
+        text-indent: 5px;
     }
 
-    .mainBox2 {
-    left: 29%;
-    width: 65%;
-    height: 470px;
+    .share {
+        left: 55%;
+    }
+
+    .calendarIcon {
+        width: 45px;
+    }
+
+    .detailsText {
+        font-size: 13px;
+        left: 75px;
+    }
+
+    .sideBox3BigText {
+        font-size: 18px;
+    }
+
+    .sideBox3Text {
+        font-size: 12px;
     }
 
     .summaryText {
-    font-size: 16px;
+        font-size: 18px;
     }
 
-    .subLetter {
-    font-size: 14px;
+    .sideBox4Text a {
+        font-size: 14px;
     }
 
-    .mainBox3List ul li {
-    font-size: 40px;
+    .linkIcon{
+        width: 65px;
     }
 
     .mainBox3List ul li a {
-    font-size: 18px;
+        font-size: 18px;
     }
 
-    .mainBox3 {
-    left: 29%;
-    width: 65%;
-    top: 1510px;
-    height: 575px;
+    .subLetter {
+        font-size: 16px;
     }
 
-    footer {
-    top: 2130px;
-    }
-
-    .footerText {
-    font-size: 19px;
-    }
 }
 
-@media only screen and (max-width: 1155px) {
+
+
+@media only screen and (max-width: 1083px) {
 
     .sideBox {
-    width: 22vw;
+        width: 20%;
     }
 
-    .mainBox1 {
-    width: 64%;
-    left: 30%;
+    .mainBox1, .mainBox2, .mainBox3 {
+        width: 67%;
+        left: 27%;
     }
 
     .mainLeftBox {
-    width: 26%;
-    left: 30%;
-    }
-
-    .mainRightBox {
-    width: 36%;
-    left: 58%;
+        left: 27%;
+        width: 33%;
     }
 
     .mainBox2 {
-    left: 30%;
-    width: 64%;
+        height: 560px;
     }
-
-    .mainBox3 {
-    left: 30%;
-    width: 64%;
-    }
-
-}
-
-@media only screen and (max-width: 1118px) {
-
-    .sideBox {
-    width: 25%;
-    }
-
-}
-
-@media only screen and (max-width: 1110px) {
-
-    .sideBox {
-    width: 26%;
-    }
-    .summaryText{
-        width: 92%;
-    }
-
-}
-
-@media only screen and (max-width: 1069px) {
-
-    .sideBox {
-    width: 27%;
-    }
-
 }
 
 @media only screen and (max-width: 1030px) {
 
     .sideBox {
-    width: 28%;
+        width: 21%;
     }
 
-    .mainBox1 {
-    width: 61%;
-    left: 33%;
-    }
-
-    .mainBox1Text {
-    font-size: 19px;
-    }
-
-    .share {
-    left: 48%;
+    .mainBox1, .mainBox2, .mainBox3 {
+        width: 66%;
+        left: 28%;
     }
 
     .mainLeftBox {
-    width: 25%;
-    left: 33%;
+        left: 28%;
+        width: 32%;
     }
 
-    .mainRightBox {
-    width: 34%;
-    left: 60%;
-    }
-
-    .mainBox2 {
-    left: 33%;
-    width: 61%;
-    }
-
-    .summaryText {
-    font-size: 14px;
-    }
-
-    .mainBox3 {
-    left: 33%;
-    width: 61%;
-    }
-
-    .mainBox3List ul li a {
-    font-size: 17px;
-    }
 
 }
 
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 980px) {
 
-    .sideBox {
-        width: 29%;
+    ..sideBox {
+        width: 22%;
+    }
+
+    .mainBox1, .mainBox2, .mainBox3 {
+        width: 65%;
+        left: 29%;
+    }
+
+    .mainLeftBox {
+        left: 29%;
+        width: 31%;
+    }
+
+    .mainBox2 {
+        height: 600px;
     }
 }
 
@@ -1386,206 +1262,93 @@ footer{
     left: 30%;
     }
 
-    .sideBox {
-    width: 30%;
-    height: 285px;
-    }
-
-    .sideBox2{    
-    position: relative;
-    top: -303px;
-    left: 34%;
-    width: 30%;
-    height: 175px;
-    }
-
-    .calendarIcon {
-    left: 5px;
-    }
-
-    .detailsText {
-    left: 65px;
-    }
-
-    .sideBox3{    
-    position: relative;
-    top: -499px;
-    left: 67%;
-    width: 32%;
-    height: 175px;
-    }
-
-    .sideBox4{    
-    position: relative;
-    top: -385px;
-    left: 0%;
-    width: 30%;
-    height: 198px;
-    }
-
-    .mainBox1{    
-    top: 565px;
-    left: 35.7%;
-    width: 58.5%;
-    }
-
-    .mainLeftBox{
-    top: 910px;
-    width: 41%;
-    left: 5%;
-    }
-
-    .mainRightBox{
-    top: 910px;
-    width: 45.5%;
-    left: 49%;
-    }
-
-    .mainBox2{
-    top: 1280px;
-    left: 5%;
-    width: 90%;
-    height: 360px;
-    }
-
-    .mainBox3{
-    top: 1680px;
-    left: 5%;
-    width: 90%;
-    }
-
-    .share {
-    left: 42%;
-    }
-
-    footer{
-    top: 2300px;
-    }
-}
-
-@media only screen and (max-width: 951px) {
     .sideBox1{
-        width: 31%;
+        width: 26%;
     }
 
     .sideBox2 {
         left: 35%;
-        width: 29%;
+        width: 28%;
+        top: -217px;
     }
 
     .sideBox3 {
-        left: 68%;
-        width: 31%;
+        left: 67%;
+        width: 27%;
+        top: -404px;
     }
 
     .sideBox4 {
-        width: 31%;
+        width: 26%;
+        top: -300px;
     }
 
     .mainBox1 {
-        left: 36.7%;
-        width: 57.5%;
+        left: 35%;
+        width: 59%;
+        top: -570px;
+        height: 270px;
     }
 
-    .mainBox1Text {
-        font-size: 16px;
+    .mainLeftBox {
+        left: 5%;
+        width: 43%;
+        top: -540px;
+    }
+
+    .mainRightBox {
+        width: 44%;
+        top: -870px;
+        height: 330px;
     }
 
     .share {
-        left: 40%;
-    }
-
-    .shareIcon {
-        font-size: 17px;
-    }
-
-    .mainBox1Icons {
-        font-size: 18px;
+        left: 42%;
+        top: 235px;
     }
 
     .mainBox2 {
-        height: 380px;
+        top: -510px;
+        height: 490px;
+        width: 89%;
+        left: 5%;
     }
 
     .mainBox3 {
-        top: 1700px;
+        width: 89%;
+        left: 5%;
+        top: -480px;
     }
-
     footer {
-        top: 2310px;
+        top: -440px;
     }
 
-}
-
-@media only screen and (max-width: 881px) { 
-
-    .sideBox1 {
-        width: 32%;
-    }
-
-    .sideBox4 {
-        width: 32%;
-    }
-
-    .mainBox1Text {
-        font-size: 15px;
-    }
-}
-
-@media only screen and (max-width: 853px) { 
-
-    .sideBox1 {
-        width: 33%;
-    }
-
-    .sideBox4 {
-        width: 33%;
-    }
-
-    .mainBox1Text {
-        font-size: 14px;
-    }
-
-    .sideBox2 {
-        left: 37%;
-    }
-
-    .mainBox1 {
-        left: 38.5%;
-        width: 56%;
-    }
-
-    .share {
-        left: 34%;
+    .detailsText {
+        font-size: 17px;
     }
 
     .sideBox3Text {
         font-size: 14px;
     }
 
-    .inputSearch {
-        width: 69%;
+    .sideBox3BigText {
+        font-size: 20px;
     }
 
-    .btn {
-        left: 63%;
+
+}
+
+@media only screen and (max-width: 853px) { 
+
+    .detailsText {
+        font-size: 15px;
+    }
+
+    .mainBox2 {
+        height: 530px;
     }
 }
 
-@media only screen and (max-width: 827px) { 
-    .sideBox1 {
-        width: 34%;
-    }
-
-    .sideBox4 {
-        width: 34%;
-    }
-
-    .sideBox1Authors {
-        left: 20px;
-    }
-
-}
 
 @media only screen and (max-width: 803px) {
 
@@ -1595,43 +1358,771 @@ footer{
         font-size: 14px;
     }
 
-    .sideBox1 {
-        width: 35%;
-    }
-
-    .sideBox4 {
-        width: 35%;
-    }
-
     .sideBox3Text {
-        left: 15px;
+        font-size: 12px;
     }
 
-    .sideBox1Authors {
-        left: 15px;
+    .sideBox3BigText {
+        font-size: 18px;
     }
 
-    .mainBox2 {
-        height: 410px;
+}
+
+@media only screen and (max-width: 795px) {
+    .barListMenu {
+        font-size: 24px;
+        top: 36px;
     }
 
-    .mainBox3 {
-        top: 1730px;
+    .detailsText {
+        left: 75px;
+        font-size: 14px;
     }
 
-    footer {
-        top: 2350px;
+    .sideBox1, .sideBox4 {
+        width: 27%;
     }
 
     .mainBox1Text {
-        font-size: 13.5px;
+        font-size: 17px;
+    }
+
+    .shareIcon {
+        font-size: 17px;
+        text-indent: 3px;
+    }
+
+    .mainBox2 {
+        height: 580px;
+    }
+
+    .summaryText {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 762px) {
+    .userAuthorIcon {
+        font-size: 15px;
+    }
+
+    .sideBox1Authors {
+        font-size: 21px;
+    }
+
+    .sideBox1Text {
+        font-size: 13px;
+    }
+
+    .detailsText {
+        font-size: 13px;
+    }
+
+    .userAuthorIcon7 {
+        left: -79px;
+        top: 75px;
+    }
+
+    .userAuthorIcon8 {
+        left: -74px;
+        top: 75px;
+    }
+
+    .userAuthorIcon9 {
+        left: -69px;
+        top: 75px;
+    }
+
+    .userAuthorIcon10 {
+        left: -64px;
+        top: 75px;
+    }
+
+    .sideBox3BigText {
+        font-size: 16px;
+    }
+
+    .mainBox1Text {
+        font-size: 15px;
+    }
+
+    .mainBox1Icons {
+        font-size: 17px;
+    }
+
+    .shareIcon {
+        font-size: 15px;
+        text-indent: 2px;
+    }
+
+    .summaryText {
+        font-size: 17px;
+    }
+
+    .mainBox2 {
+        height: 560px;
+    }
+
+    .mainBox3List ul li a {
+        font-size: 17px;
+    }
+
+    .subLetter {
+        font-size: 15px;
+    }
+
+    .iconText {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .sideBox1, .sideBox4 {
+        width: 28%;
+    }
+
+    .sideBox2 {
+        left: 36%;
+        width: 27%;
+    }
+
+    .calendarIcon {
+        width: 38px;
+        top: 60px;
+    }
+
+    .detailsText {
+        font-size: 12px;
+        left: 69px;
+        top: 30px;
+    }
+
+    .sideBox3 {
+        left: 65%;
+        width: 29%;
+    }
+
+    .sideBox1Authors {
+        font-size: 19px;
+    }
+
+    .mainBox1 {
+        left: 36%;
+        width: 58%;
+    }
+
+    .mainBox1Text {
+        font-size: 13px;
+        top: 150px;
+    }
+
+    .mainBox2 {
+        height: 580px;
+    }
+
+    .footerText {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .iconText {
+        font-size: 16px;
+    }
+
+    .iconTextActive {
+        font-size: 16px;
+    }
+
+    .mainBox2 {
+        height: 610px;
+    }
+
+    .iconsStyleRest {
+        font-size: 21px;
+    }
+
+    .iconsStyleFeature {
+        font-size: 21px;
+    }
+
+    .iconsStyleMap {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .iconsStyleRest, .iconsStyleFeature, .iconsStyleMap {
+        font-size: 20px;
+    }
+
+    .iconTextActive, .iconTextA {
+        font-size: 15px;
+    }
+
+    .calendarIcon {
+        width: 35px;
+        top: 70px;
+    }
+
+    .detailsText {
+        font-size: 11px;
+        left: 65px;
+        top: 40px;
+    }
+
+    .sideBox1Text {
+        font-size: 12px;
+    }
+
+    .sideBox3BigText {
+        font-size: 15px;
+    }
+
+    .sideBox3Text {
+        font-size: 10px;
+    }
+
+    .sideBox4Text a {
+        font-size: 12px;
+    }
+
+    .linkIcon {
+        width: 60px;
+    }
+
+    .shareIcon {
+        font-size: 13px;
+        text-indent: 0px;
     }
 
     .share {
+        left: 38%;
+        top: 235px;
+    }
+
+}
+
+@media only screen and (max-width: 655px) {
+    .inputYear {
+        width: 27%;
+    }
+
+    .fa-calendar-alt {
+        left: 28%;
+    }
+
+    .inputAuthor {
+        width: 24%;
+        left: 35%;
+    }
+
+    .fa-user {
+        left: 55%;
+    }
+
+    .btn {
+    width: 11%;
+    }
+
+    .inputSearch {
+        width: 57%;
+    }
+
+    .fa-search {
+        left: 55%;
+    }
+
+    .searchForm {
+        height: 210px;
+    }
+
+    .btn {
+        left: 5%;
+        top: 264px;
+    }
+
+    .featuresList {
+        height: 110px;
+    }
+
+    .featuresList ul li {
+        padding-right: 15%;
+        padding-bottom: 16px;
+    }
+
+    .featuresList ul li a {
+        padding-right: 15px;
+    }
+    .fa-bullseye{
+        left: -8px;
+    }
+
+    .lastChild{
+        left: -8px;
+    }
+
+    .sideBox1 {
+        width: 43%;
+        top: 40px;
+    }
+
+    .inputSearch {
+        width: 57%;
+    }
+
+    .fa-search {
+        left: 55%;
+    }
+
+    .searchForm {
+        height: 210px;
+    }
+
+    .btn {
+        left: 5%;
+        top: 264px;
+    }
+
+    .sideBox3 {
+        left: 52%;
+        width: 43%;
+        top: -403px;
+        height: 256px;
+    }
+
+    .sideBox4 {
+        width: 43%;
+        top: -378px;
+        left: 5%;
+    }
+
+    .sideBox2 {
+        top: 63px;
+        left: 52%;
+        width: 43%;
+        height: 186px;
+    }
+
+    .mainBox1 {
+        height: 272px;
+        top: -350px;
+        left: 5%;
+        width: 90%;
+    }
+
+    .sideBox1Text {
+        font-size: 16px;
+    }
+
+    .linkIcon {
+        width: 70px;
+    }
+
+    .sideBox4Text a {
+        font-size: 17px;
+    }
+
+    .calendarIcon {
+        width: 50px;
+        top: 50px;
+    }
+
+    .detailsText {
+        font-size: 16px;
+        left: 85px;
+        top: 15px;
+    }
+
+    .shareIcon {
+        font-size: 17px;
+        text-indent: 4px;
+    }
+
+    .share {
+        top: 230px;
+    }
+
+    .mainLeftBox {
+        top: -320px;
+        width: 40%;
+    }
+
+    .mainRightBox {
+        width: 44%;
+        top: -650px;
+        height: 330px;
+    }
+
+    .mainBox2 {
+        top: -280px;
+        height: 640px;
+        width: 90%;
+    }
+
+    .mainBox3 {
+        top: -250px;
+        height: 535px;
+        width: 90%;
+    }
+
+    footer {
+        top: -210px;
+    }
+
+
+    .share {
+        left: 50%;
+    }
+
+    .mainBox1Text {
+        font-size: 16px;
+    }
+
+    .summaryText {
+        width: 90%;
+    }
+
+    .mainBox3List ul li {
+        font-size: 30px;
+    }
+    
+    .sideBox3Text {
+        font-size: 17px;
+        left: 16px;
+        top: 75px;
+    }
+
+    .sideBox3BigText {
+        font-size: 22px;
+    }
+
+    .sideBox1Authors {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 624px) {
+
+    .mainBox3 {
+        top: 2200px;
+    }
+
+    .featuresList ul li {
+        float: none;
+    }
+
+    .featuresList {
+        height: 280px;
+    }
+
+    .btn {
+        width: 10%;
+    }
+
+    .mainBox1 {
+        top: -360px;
+        left: 5%;
+        width: 90%;
+    }
+
+    .mainRightBox {
+        top: -670px;
+        width: 47%;
+    }
+
+    .mainLeftBox {
+        top: -340px;
+        left: 5%;
+        width: 40%;
+    }
+
+    .mainBox2 {
+        top: -320px;
+        position: relative;
+        left: 5%;
+        width: 90%;
+        height: 660px;
+    }
+
+    .mainBox3 {
+        top: -300px;
+        height: 565px;
+    }
+
+    footer {
+        top: -275px;
+    }
+
+    .subLetter {
+        font-size: 13px;
+    }
+
+    .mainBox3List ul li a {
+        top: -7px;
+        font-size: 16px;
+    }
+
+    .mainBox3List ul li {
+        padding-bottom: 35px;
+    }
+
+    .mobileFeatureListButtonOpen {
+        font-size: 30px;
+        position: absolute;
+        right: 5%;
+        top: 314px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .mobileFeatureListButtonClose{
+        font-size: 30px;
+        position: absolute;
+        right: 5%;
+        top: 314px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .fa-caret-square-down{
+        color: #6d6e72;      
+    }
+    
+    .fa-caret-square-up{
+        color: #6d6e72; 
+    }
+
+    .mobileFeatureList{
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .iconTextActive {
+        font-size: 22px;
+        top: -5px;
+    }
+
+    .iconText {
+        font-size: 22px;
+        top: -5px;
+    }
+
+    .mobileFormButtonOpen{
+        font-size: 30px;
+        position: absolute;
+        right: 5%;
+        top: 105px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .mobileFormButtonClose{
+        font-size: 30px;
+        position: absolute;
+        right: 5%;
+        top: 105px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .fa-bullseye {
+        left: 0px;
+    }
+
+    .lastChild {
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .btn {
+        width: 15%;
+    }
+
+    .sideBox1Authors {
+        font-size: 24px;
+    }
+
+    .sideBox1Text {
+        font-size: 15px;
+    }
+
+    .sideBox3Text {
+        font-size: 15px;
+    }
+
+    .sideBox3BigText {
+        font-size: 20px;
+    }
+
+    .sideBox4Text a {
+        font-size: 16px;
+    }
+
+    .detailsText {
         font-size: 14px;
     }
-} 
 
+    .share {
+        left: 44%;
+    }
+
+    .summaryText {
+        font-size: 16px;
+    }
+
+    .mainBox3List ul li {
+        font-size: 28px;
+    }
+
+    .mainBox3List ul li a {
+        top: -6px;
+        font-size: 15px;
+    }
+
+    .mainBox3 {
+        height: 544px;
+    }
+
+    .footerText {
+        font-size: 19px;
+    }
+
+    .copyrightsText1 {
+        font-size: 14px;
+    }
+
+    .copyrightsText2 {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .mainBox2 {
+        height: 700px;
+    }
+
+    .mainBox3 {
+        height: 580px;
+    }
+}
+
+@media only screen and (max-width: 516px) {
+
+    .searchForm {
+        height: 60px;
+        overflow: hidden;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .inBtuttonText {
+        margin-left: -30px;
+        font-size: 15px;
+    }
+
+    .inputAuthor {
+        top: 268px;
+    }
+
+    .fa-user {
+        top: 284px;
+    }
+
+    .mainBox2 {
+        height: 730px;
+    }
+
+    .mainBox3 {
+        top: -290px;
+        height: 600px;
+    }
+
+    footer {
+        top: -260px;
+    }
+
+    .logo {
+        margin-left: -113.5px;
+        left: 45%;
+        position: relative;
+    }
+
+    .dataSearch {
+        left: 50%;
+        margin-left: -98px;
+    }
+
+    .inputSearch {
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+        display: none;
+        opacity: 0;
+    }
+
+    .fa-search {
+        left: 75%;
+        display: none;
+        opacity: 0;
+    }
+
+    .inputYear {
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+        display: none;
+        opacity: 0;
+    }
+
+    .fa-calendar-alt {
+        left: 75%;
+        display: none;
+        opacity: 0;
+    }
+
+    .inputAuthor {
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+        display: none;
+        opacity: 0;
+    }
+
+    .fa-user {
+        left: 75%;
+        display: none;
+        opacity: 0;
+    }
+
+    .btn {
+        left: 50%;
+        top: 325px;
+        width: 100px;
+        margin-left: -50px;
+        display: none;
+        opacity: 0;
+    }
+
+    .mobileFeatureListButtonOpen {
+        top: 167px;
+    }
+
+    .mobileFeatureListButtonClose {
+        top: 167px;
+    }
+
+    .featuresList {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .featuresList ul li {
+        padding-right: 0;
+        left: 50%;
+        padding-bottom: 16px;
+        margin-left: -80px;
+    }
+
+}
 
 /******************* HOVERS *********************/
 
@@ -1654,3 +2145,4 @@ footer{
 .fa-google-plus-g:hover {
     color:#C20806;
 }
+
